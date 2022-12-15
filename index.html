@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swiper JS</title>
+    <!-- swiper css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="all.min.css" />
+    <!-- main css -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="slider-area">
+      <div class="swiper productSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="single-slider">
+              <img src="img/img-1.jpg" />
+              <a href="#"><h2>Shop now</h2></a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="single-slider">
+              <img src="img/img-2.jpg" />
+              <a href="#"><h2>Shop now</h2></a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="single-slider">
+              <img src="img/img-3.jpg" />
+              <a href="#"><h2>Shop now</h2></a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="single-slider">
+              <img src="img/img-1.jpg" />
+              <a href="#"><h2>Shop now</h2></a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="single-slider">
+              <img src="img/img-2.jpg" />
+              <a href="#"><h2>Shop now</h2></a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="single-slider">
+              <img src="img/img-3.jpg" />
+              <a href="#"><h2>Shop now</h2></a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-scrollbar"></div>
+      </div>
+    </div>
+
+    <div class="review-slider">
+      <div class="swiper reviewSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="single-review">
+              <!-- <i class="fa-solid fa-quote-left"></i> -->
+              <h2>Lorem, ipsum dolor.</h2>
+              <h4>Lorem, ipsum.</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Pariatur magni laboriosam eius voluptatibus illo quae
+                perferendis quia, natus odit praesentium!
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="single-review">
+              <h2>Lorem, ipsum dolor.</h2>
+              <h4>Lorem, ipsum.</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Pariatur magni laboriosam eius voluptatibus illo quae
+                perferendis quia, natus odit praesentium!
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="single-review">
+              <h2>Lorem, ipsum dolor.</h2>
+              <h4>Lorem, ipsum.</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Pariatur magni laboriosam eius voluptatibus illo quae
+                perferendis quia, natus odit praesentium!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-scrollbar"></div>
+      </div>
+    </div>
+
+    <!-- swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".productSwiper", {
+        slidesPerView: 1,
+        centeredSlides: false,
+        slidesPerGroupSkip: 1,
+        grabCursor: true,
+        spaceBetween: 30,
+        keyboard: {
+          enabled: true,
+        },
+        breakpoints: {
+          991: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+          },
+        },
+        scrollbar: {
+          el: ".swiper-scrollbar",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+
+      var swiper = new Swiper(".reviewSwiper", {
+        slidesPerView: 1,
+        centeredSlides: false,
+        slidesPerGroupSkip: 1,
+        grabCursor: true,
+        spaceBetween: 30,
+        keyboard: {
+          enabled: true,
+        },
+        scrollbar: {
+          el: ".swiper-scrollbar",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+  </body>
+</html>
